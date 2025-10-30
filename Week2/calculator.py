@@ -1,67 +1,82 @@
-
 while True:
-    try:
-        print ('Please enter a number:')
-        number1 = float(input())
-        break   
-    except ValueError:
-        print('Incorrect input, please try a number')
-        
-while True:     
-   try:
-       print('Please input a second number')
-       number2 = float(input())
-       break
-   except:
-       print('Incorrect input, please try a number')
-
-
-
-while True:
-    try:
-        print('please select an operation for these two numbers:\n'
-        '1. Addition\n'
-        '2. Subtration\n'
-        '3. Multiplication\n'
-        '4. Division\n')
-        operation = int(input())
-        if operation in [1,2,3,4]:
+    while True:
+        try:
+            print ('Please enter a number:')
+            number1 = float(input())
+            break   
+        except ValueError:
+            print('Incorrect input, please try a number')
+            
+    while True:     
+        try:
+            print('Please input a second number')
+            number2 = float(input())
             break
-        else:
+        except:
+            print('Incorrect input, please try a number')
+
+
+
+    while True:
+        try:
+            print('please select an operation for these two numbers:\n'
+            '1. Addition\n'
+            '2. Subtration\n'
+            '3. Multiplication\n'
+            '4. Division')
+            operation = int(input())
+            if operation in [1,2,3,4]:
+                break
+            else:
+                print('Incorrect input, please try one of the selections.')
+        except ValueError:
+            #ValueError is a built in exception for when invalid data types are input
             print('Incorrect input, please try one of the selections.')
-    except ValueError:
-        print('Incorrect input, please try one of the selections.')
 
 
 
-number3 = None
-#number3 is declare as a variable, intended to be overwritten
+    number3 = None
+    #number3 is declare as a variable, intended to be overwritten
 
-while True:
-    try:
-        if operation == 1:
-            operation = '+'
-            number3 = number1 + number2
+    while True:
+        try:
+            if operation == 1:
+                operation = '+'
+                number3 = number1 + number2
+                break
+        
+            elif operation == 2:
+                operation = '-'
+                number3 = number1 - number2 
+                break
             
-    
-        elif operation == 2:
-            opertation = '-'
-            number3 = number1 - number2 
-            
-        elif operation == 3:
-            operation = '*'
-            number3 = number1 * number2
-            
-                
-        elif operation == 4:
-            operation = '/'
-            if number2 != 0:
-                number3 = number1 / number2
-        else:
+            elif operation == 3:
+                operation = '*'
+                number3 = number1 * number2
+                break
+                    
+            elif operation == 4:
+                operation = '/'
+                if number2 != 0:
+                    number3 = number1 / number2
+                    break
+                else:
+                    if number2 == 0:
+                        print('#### Error! Cannot divide by 0! ####')
+                        break
+        except ValueError:
             break
            
-    except:
-        if number2 == 0:
-                print('Cannot divide by 0')
-                break
-print(f'{float(number1)} {operation} {float(number2)} is = {number3}')
+    print(f'{float(number1)} {operation} {float(number2)} is = {number3}')
+    try:
+        print('Would you like to try another calculation?\n'
+            '1. Yes\n'
+            '2. No')
+        another_Calc = int(input())
+    except ValueError:
+        print('Invalid input, please select 1 or 2')
+        break
+    
+    if another_Calc != 1:
+        print('Have a good day!')
+        break
