@@ -42,26 +42,26 @@ while True:
         if operation == 1:
             operation = '+'
             number3 = number1 + number2
-            break
+            
     
         elif operation == 2:
             opertation = '-'
             number3 = number1 - number2 
-            break
+            
         elif operation == 3:
             operation = '*'
             number3 = number1 * number2
-            break
+            
                 
         elif operation == 4:
             operation = '/'
             if number2 != 0:
                 number3 = number1 / number2
-            if number2 == 0:
-                print('Cannot divide by 0')
-                break
+        else:
+            break
+           
     except:
         if number2 == 0:
                 print('Cannot divide by 0')
-                
+                break
 print(f'{float(number1)} {operation} {float(number2)} is = {number3}')
