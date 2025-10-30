@@ -1,7 +1,8 @@
 while True:
     while True:
         try:
-            print ('Please enter a number:')
+            print ('Welcome back!\n'
+                   'Please enter a number:')
             number1 = float(input())
             break   
         except ValueError:
@@ -66,17 +67,28 @@ while True:
                         break
         except ValueError:
             break
-           
+
     print(f'{float(number1)} {operation} {float(number2)} is = {number3}')
-    try:
-        print('Would you like to try another calculation?\n'
-            '1. Yes\n'
-            '2. No')
-        another_Calc = int(input())
-    except ValueError:
-        print('Invalid input, please select 1 or 2')
-        break
-    
-    if another_Calc != 1:
-        print('Have a good day!')
-        break
+
+    while True:
+        try:
+            print('Would you like to try another calculation?\n'
+                '1. Yes\n'
+                '2. No')
+            
+            #input must be an integer
+            another_Calc = int(input())
+            #another caluclation or exit script   
+            if another_Calc == int(1):
+                break
+            elif another_Calc == int(2):
+                print('Have a good day!')
+                quit()
+            #input validation
+            else:
+                print('Invalid input, please select 1 or 2')
+          
+        
+        except ValueError:
+            print('Invalid input, please select 1 or 2')
+            continue
