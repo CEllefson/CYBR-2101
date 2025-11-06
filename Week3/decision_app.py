@@ -1,4 +1,5 @@
-#Input Validation for first question, realistically should be turned into a defined function for several iterations, but will keep written out since length is not too long.
+#Input Validation for first question, realistically should be turned into a defined function for several iterations
+#Will keep written out since length is not too long.
 while True:
     try:
         print('Are you enjoying school this year?\n'
@@ -29,7 +30,9 @@ while True:
         #if user2 in list(range(1,11)), this would be better for longer lists using range's (start, stop, step) paramenters, step is defaulted to 1
         if user2 in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]:
             break
-        
+        else:
+            print('Invalid input, please try again')
+            continue
     except ValueError:
         print('Invalid input, please try again')
         continue
@@ -65,7 +68,9 @@ while True:
         #if user2 in list(range(1,11)), this would be better for longer lists using range's (start, stop, step) paramenters, step is defaulted to 1
         if user3 in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]:
             break
-        
+        else:
+            print('Invalid input, please try again')
+            continue
     except ValueError:
         print('Invalid input, please try again')
         continue
