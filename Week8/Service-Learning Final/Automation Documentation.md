@@ -2,7 +2,7 @@
 
 IMPORTANT! Please ensure that the data.csv file is within the same folder as the “Automation Project.py” or whatever the project is named when it is uploaded. The python script made specifically for that csv file with 4 rows of Date, Sales, Revenue, and Cost. These can easily be adjusted to add more data types that can be extrapolated into more metrics, but for this project we will keep it simple and show the basic ideas for automation for a company.
 
-Additionally if they aren't installed, use "pip install schedule" or  and "pip install pandas" to ensure necessary modules are installed.
+Additionally if they aren't installed, use "pip install schedule" and "pip install pandas" to ensure necessary modules are installed.
 
 # Functions
 For this project I ended up only using 4 functions, more could have been made but I think it would’ve been unnecessary and would’ve made the flow for the code more complicated and even convoluted. 
