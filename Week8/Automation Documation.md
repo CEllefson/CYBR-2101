@@ -18,3 +18,6 @@ is the final function that takes the metrics where all the data we extrapolated 
 is just a function that takes the 3 core functions and runs them together so that the data is imported from one to another effortlessly. This script is designed so that the data analyst, manager, or whomever just needs to run this once and they will get data monthly based off of sales figures that are accrued within data.csv. It is supposed to be as hands off as possible and runs in the background using minimal resources. While there are probably more efficient ways to code this for long-term use, I believe this will use a very minimal amount of resources.
 
 The code is then scheduled to run once every 30 days at 0800 in the morning from the day it was started. It seemed like a practical time for checking data metrics. 
+
+# metrics.csv
+This is where the data will be easily viewed from after the script has ran and either created this file or appended new data to it. The file will be within the same folder as the Automation Project.py and the data.csv files.
